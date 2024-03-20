@@ -17,24 +17,33 @@ namespace W3Schools
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void ConnectButton_Click(object sender, EventArgs e)
         {
+            DBManager manager = new();
+            bool userExists = manager.UserExists(UsernameTextbox.Text, PasswordTextbox.Text);
+            if (userExists)
+            {
+                MessageBox.Show("Access granted", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+            }
+            else
+            {
+                MessageBox.Show("Invalid credentials, access denied", "Login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void CancelButton_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void PasswordTextbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
+            if(e.KeyChar == 13)
+            {
+                ConnectButton.PerformClick();
+            }
         }
     }
 }

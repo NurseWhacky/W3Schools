@@ -44,9 +44,8 @@
             LoginLabel.Location = new Point(58, 44);
             LoginLabel.Name = "LoginLabel";
             LoginLabel.Size = new Size(282, 24);
-            LoginLabel.TabIndex = 0;
+            LoginLabel.TabIndex = 4;
             LoginLabel.Text = "Access W3Schools database";
-            LoginLabel.Click += label1_Click;
             // 
             // label2
             // 
@@ -54,9 +53,9 @@
             label2.Font = new Font("Arial", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(58, 144);
             label2.Name = "label2";
-            label2.Size = new Size(148, 19);
-            label2.TabIndex = 1;
-            label2.Text = "Username or Email";
+            label2.Size = new Size(83, 19);
+            label2.TabIndex = 5;
+            label2.Text = "Username";
             // 
             // label3
             // 
@@ -67,7 +66,6 @@
             label3.Size = new Size(80, 19);
             label3.TabIndex = 2;
             label3.Text = "Password";
-            label3.Click += label3_Click;
             // 
             // UsernameTextbox
             // 
@@ -76,8 +74,7 @@
             UsernameTextbox.Name = "UsernameTextbox";
             UsernameTextbox.PlaceholderText = "es.: CiccioBenzina";
             UsernameTextbox.Size = new Size(292, 27);
-            UsernameTextbox.TabIndex = 3;
-            UsernameTextbox.TextChanged += textBox1_TextChanged;
+            UsernameTextbox.TabIndex = 0;
             // 
             // PasswordTextbox
             // 
@@ -85,9 +82,9 @@
             PasswordTextbox.Location = new Point(58, 261);
             PasswordTextbox.Name = "PasswordTextbox";
             PasswordTextbox.Size = new Size(292, 27);
-            PasswordTextbox.TabIndex = 4;
+            PasswordTextbox.TabIndex = 1;
             PasswordTextbox.UseSystemPasswordChar = true;
-            PasswordTextbox.TextChanged += textBox2_TextChanged;
+            PasswordTextbox.KeyPress += PasswordTextbox_KeyPress;
             // 
             // CancelButton
             // 
@@ -95,9 +92,10 @@
             CancelButton.Location = new Point(230, 401);
             CancelButton.Name = "CancelButton";
             CancelButton.Size = new Size(120, 48);
-            CancelButton.TabIndex = 5;
+            CancelButton.TabIndex = 3;
             CancelButton.Text = "Cancel";
             CancelButton.UseVisualStyleBackColor = true;
+            CancelButton.Click += CancelButton_Click;
             // 
             // ConnectButton
             // 
@@ -108,9 +106,10 @@
             ConnectButton.Location = new Point(103, 401);
             ConnectButton.Name = "ConnectButton";
             ConnectButton.Size = new Size(121, 48);
-            ConnectButton.TabIndex = 6;
+            ConnectButton.TabIndex = 2;
             ConnectButton.Text = "Connect";
             ConnectButton.UseVisualStyleBackColor = false;
+            ConnectButton.Click += ConnectButton_Click;
             // 
             // LoginForm
             // 
@@ -128,7 +127,7 @@
             Controls.Add(LoginLabel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Name = "LoginForm";
-            Opacity = 0.8D;
+            Opacity = 0.9D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sign In";
             ResumeLayout(false);
