@@ -56,6 +56,7 @@ namespace W3Schools
 
         public DataTable GetDataTable(string query, Dictionary<string, object> parameters)
         {
+            //create connection obj
             using SqlConnection connection = new(ConnectionString);
             connection.Open(); // attempt to establish connection
             SqlCommand command = new(query, connection); // sqlcommand object creation

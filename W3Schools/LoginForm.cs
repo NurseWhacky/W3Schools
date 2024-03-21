@@ -10,6 +10,11 @@ using System.Windows.Forms;
 
 namespace W3Schools
 {
+    /*
+     * * gallery of windows forms: 
+     * DPI mode (window containing other windows)
+     * ShowDialog (windows w/ forced focus)
+     */
     public partial class LoginForm : Form
     {
         public LoginForm()

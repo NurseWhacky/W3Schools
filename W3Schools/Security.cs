@@ -23,16 +23,18 @@ namespace W3Schools
 
             if(result.Rows.Count > 0)
             {
+                var row = result.Rows[0];
                 return new LoginResult
                 {
                     Success = true,
-                    Error = null,
+                    Error = "",
                     ConnectedUser = new User
                     {
-                        UserId = Convert.ToInt32(result.Rows[0]["UserId"]),
-                        UserName = result.Rows[0]["UserName"].ToString(),
-                        FirstName = result.Rows[0]["FirstName"].ToString(),
-                        LastName = result.Rows[0]["LastName"].ToString(),
+                        UserId = Convert.ToInt32(row["UserId"]),
+                        //UserName = row["UserName"].ToString(),
+                        UserName = row["UserName"] as string ?? "",
+                        FirstName = row["FirstName"] as string ?? "",
+                        LastName = row["LastName"] as string ?? "",
                     }
                 };
                 

@@ -35,6 +35,8 @@
             PasswordTextbox = new TextBox();
             CancelButton = new Button();
             ConnectButton = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // LoginLabel
@@ -111,6 +113,15 @@
             ConnectButton.UseVisualStyleBackColor = false;
             ConnectButton.Click += ConnectButton_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.key_32;
+            pictureBox1.Location = new Point(26, 36);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(36, 32);
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -118,6 +129,7 @@
             BackColor = Color.Beige;
             ClientSize = new Size(409, 523);
             ControlBox = false;
+            Controls.Add(pictureBox1);
             Controls.Add(ConnectButton);
             Controls.Add(CancelButton);
             Controls.Add(PasswordTextbox);
@@ -130,6 +142,8 @@
             Opacity = 0.9D;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Sign In";
+            KeyPress += PasswordTextbox_KeyPress;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -143,5 +157,6 @@
         private TextBox PasswordTextbox;
         private Button CancelButton;
         private Button ConnectButton;
+        private PictureBox pictureBox1;
     }
 }

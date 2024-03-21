@@ -17,12 +17,13 @@ namespace W3Schools
             InitializeComponent();
         }
 
-        int clicks = 0;
-        private void button1_Click(object sender, EventArgs e)
+        private void chiudiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            clicks++;
-            ClickMe.Text = $"# of clicks: {clicks}";
-            
+            var risposta = MessageBox.Show("Sei sicuro di voler uscire?", "Esci", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+            if(risposta == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
