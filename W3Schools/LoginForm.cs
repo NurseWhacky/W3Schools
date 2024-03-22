@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using W3Schools.Model;
 
 namespace W3Schools
 {
@@ -24,15 +25,15 @@ namespace W3Schools
 
         private void ConnectButton_Click(object sender, EventArgs e)
         {
-            DBManager manager = new();
-            bool userExists = manager.UserExists(UsernameTextbox.Text, PasswordTextbox.Text);
-            if (userExists)
+
+            Security security = new Security();
+            LoginResult result = security.DoLogin(UsernameTextbox.Text, PasswordTextbox.Text);
+            if (result.Success)
             {
-                MessageBox.Show("Access granted", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-            }
-            else
-            {
-                MessageBox.Show("Invalid credentials, access denied", "Login", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show($"Access granted,\nwelcome back {result.ConnectedUser.FirstName}!");
+                Session.GetInstance().Create(result.ConnectedUser);
+                DialogResult = DialogResult.OK;
+                
             }
 
 
@@ -40,12 +41,12 @@ namespace W3Schools
 
         private void CancelButton_Click(object sender, EventArgs e)
         {
-            Close();
+            DialogResult =  DialogResult.Cancel;
         }
 
         private void PasswordTextbox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == 13)
+            if (e.KeyChar == 13)
             {
                 ConnectButton.PerformClick();
             }

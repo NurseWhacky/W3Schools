@@ -29,119 +29,100 @@
         private void InitializeComponent()
         {
             menuStrip1 = new MenuStrip();
-            liubioiokToolStripMenuItem = new ToolStripMenuItem();
-            pobaToolStripMenuItem = new ToolStripMenuItem();
-            toolStripSeparator1 = new ToolStripSeparator();
-            sucaToolStripMenuItem = new ToolStripMenuItem();
-            setziToolStripMenuItem = new ToolStripMenuItem();
-            craccaToolStripMenuItem = new ToolStripMenuItem();
-            editToolStripMenuItem = new ToolStripMenuItem();
-            viewToolStripMenuItem = new ToolStripMenuItem();
+            menuToolStripMenuItem = new ToolStripMenuItem();
+            showProductsToolStripMenuItem = new ToolStripMenuItem();
+            showEmployeesToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripSeparator();
+            loginToolStripMenuItem = new ToolStripMenuItem();
+            logoutToolStripMenuItem = new ToolStripMenuItem();
+            exitToolStripMenuItem = new ToolStripMenuItem();
             gitToolStripMenuItem = new ToolStripMenuItem();
-            fileToolStripMenuItem = new ToolStripMenuItem();
-            nuovoToolStripMenuItem = new ToolStripMenuItem();
-            salvaToolStripMenuItem = new ToolStripMenuItem();
-            salvaComeToolStripMenuItem = new ToolStripMenuItem();
-            chiudiToolStripMenuItem = new ToolStripMenuItem();
+            cloneRepositoryToolStripMenuItem = new ToolStripMenuItem();
+            stageChangesToolStripMenuItem = new ToolStripMenuItem();
+            commiitChangesToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, editToolStripMenuItem, viewToolStripMenuItem, gitToolStripMenuItem, liubioiokToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { menuToolStripMenuItem, gitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(877, 28);
             menuStrip1.TabIndex = 3;
             menuStrip1.Text = "menuStrip1";
             // 
-            // liubioiokToolStripMenuItem
+            // menuToolStripMenuItem
             // 
-            liubioiokToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pobaToolStripMenuItem, toolStripSeparator1, sucaToolStripMenuItem, setziToolStripMenuItem, craccaToolStripMenuItem });
-            liubioiokToolStripMenuItem.Name = "liubioiokToolStripMenuItem";
-            liubioiokToolStripMenuItem.Size = new Size(91, 24);
-            liubioiokToolStripMenuItem.Text = "interagisci";
+            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { showProductsToolStripMenuItem, showEmployeesToolStripMenuItem, toolStripMenuItem1, loginToolStripMenuItem, logoutToolStripMenuItem, exitToolStripMenuItem });
+            menuToolStripMenuItem.Name = "menuToolStripMenuItem";
+            menuToolStripMenuItem.Size = new Size(60, 24);
+            menuToolStripMenuItem.Text = "Menu";
             // 
-            // pobaToolStripMenuItem
+            // showProductsToolStripMenuItem
             // 
-            pobaToolStripMenuItem.Enabled = false;
-            pobaToolStripMenuItem.Name = "pobaToolStripMenuItem";
-            pobaToolStripMenuItem.Size = new Size(224, 26);
-            pobaToolStripMenuItem.Text = "poba";
+            showProductsToolStripMenuItem.Name = "showProductsToolStripMenuItem";
+            showProductsToolStripMenuItem.Size = new Size(224, 26);
+            showProductsToolStripMenuItem.Text = "Show products";
+            showProductsToolStripMenuItem.Click += showProductsToolStripMenuItem_Click;
             // 
-            // toolStripSeparator1
+            // showEmployeesToolStripMenuItem
             // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(221, 6);
+            showEmployeesToolStripMenuItem.Name = "showEmployeesToolStripMenuItem";
+            showEmployeesToolStripMenuItem.Size = new Size(224, 26);
+            showEmployeesToolStripMenuItem.Text = "Show employees";
+            showEmployeesToolStripMenuItem.Click += showEmployeesToolStripMenuItem_Click;
             // 
-            // sucaToolStripMenuItem
+            // toolStripMenuItem1
             // 
-            sucaToolStripMenuItem.Name = "sucaToolStripMenuItem";
-            sucaToolStripMenuItem.Size = new Size(224, 26);
-            sucaToolStripMenuItem.Text = "suca";
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(221, 6);
             // 
-            // setziToolStripMenuItem
+            // lognToolStripMenuItem
             // 
-            setziToolStripMenuItem.Name = "setziToolStripMenuItem";
-            setziToolStripMenuItem.Size = new Size(224, 26);
-            setziToolStripMenuItem.Text = "setzi";
+            loginToolStripMenuItem.Name = "lognToolStripMenuItem";
+            loginToolStripMenuItem.Size = new Size(224, 26);
+            loginToolStripMenuItem.Text = "Login";
+            loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
             // 
-            // craccaToolStripMenuItem
+            // logoutToolStripMenuItem
             // 
-            craccaToolStripMenuItem.Name = "craccaToolStripMenuItem";
-            craccaToolStripMenuItem.Size = new Size(224, 26);
-            craccaToolStripMenuItem.Text = "cracca";
+            logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+            logoutToolStripMenuItem.Size = new Size(224, 26);
+            logoutToolStripMenuItem.Text = "Logout";
+            logoutToolStripMenuItem.Visible = false;
             // 
-            // editToolStripMenuItem
+            // exitToolStripMenuItem
             // 
-            editToolStripMenuItem.Name = "editToolStripMenuItem";
-            editToolStripMenuItem.Size = new Size(49, 24);
-            editToolStripMenuItem.Text = "Edit";
-            // 
-            // viewToolStripMenuItem
-            // 
-            viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            viewToolStripMenuItem.Size = new Size(53, 24);
-            viewToolStripMenuItem.Text = "view";
+            exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            exitToolStripMenuItem.Size = new Size(224, 26);
+            exitToolStripMenuItem.Text = "Exit";
             // 
             // gitToolStripMenuItem
             // 
+            gitToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { cloneRepositoryToolStripMenuItem, stageChangesToolStripMenuItem, commiitChangesToolStripMenuItem });
             gitToolStripMenuItem.Name = "gitToolStripMenuItem";
             gitToolStripMenuItem.Size = new Size(41, 24);
             gitToolStripMenuItem.Text = "git";
             // 
-            // fileToolStripMenuItem
+            // cloneRepositoryToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { nuovoToolStripMenuItem, salvaToolStripMenuItem, salvaComeToolStripMenuItem, chiudiToolStripMenuItem });
-            fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(46, 24);
-            fileToolStripMenuItem.Text = "File";
+            cloneRepositoryToolStripMenuItem.Name = "cloneRepositoryToolStripMenuItem";
+            cloneRepositoryToolStripMenuItem.Size = new Size(205, 26);
+            cloneRepositoryToolStripMenuItem.Text = "Clone repository";
             // 
-            // nuovoToolStripMenuItem
+            // stageChangesToolStripMenuItem
             // 
-            nuovoToolStripMenuItem.Name = "nuovoToolStripMenuItem";
-            nuovoToolStripMenuItem.Size = new Size(224, 26);
-            nuovoToolStripMenuItem.Text = "Nuovo";
+            stageChangesToolStripMenuItem.Name = "stageChangesToolStripMenuItem";
+            stageChangesToolStripMenuItem.Size = new Size(205, 26);
+            stageChangesToolStripMenuItem.Text = "Stage changes";
             // 
-            // salvaToolStripMenuItem
+            // commiitChangesToolStripMenuItem
             // 
-            salvaToolStripMenuItem.Name = "salvaToolStripMenuItem";
-            salvaToolStripMenuItem.Size = new Size(224, 26);
-            salvaToolStripMenuItem.Text = "Salva";
-            // 
-            // salvaComeToolStripMenuItem
-            // 
-            salvaComeToolStripMenuItem.Name = "salvaComeToolStripMenuItem";
-            salvaComeToolStripMenuItem.Size = new Size(224, 26);
-            salvaComeToolStripMenuItem.Text = "Salva come...";
-            // 
-            // chiudiToolStripMenuItem
-            // 
-            chiudiToolStripMenuItem.Name = "chiudiToolStripMenuItem";
-            chiudiToolStripMenuItem.Size = new Size(224, 26);
-            chiudiToolStripMenuItem.Text = "Chiudi";
-            chiudiToolStripMenuItem.Click += chiudiToolStripMenuItem_Click;
+            commiitChangesToolStripMenuItem.Name = "commiitChangesToolStripMenuItem";
+            commiitChangesToolStripMenuItem.Size = new Size(205, 26);
+            commiitChangesToolStripMenuItem.Text = "Commit Changes";
             // 
             // MainForm
             // 
@@ -152,6 +133,8 @@
             IsMdiContainer = true;
             Name = "MainForm";
             Text = "MainForm";
+            WindowState = FormWindowState.Maximized;
+            Load += MainForm_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ResumeLayout(false);
@@ -161,19 +144,16 @@
         #endregion
 
         private MenuStrip menuStrip1;
-        private ToolStripMenuItem liubioiokToolStripMenuItem;
-        private ToolStripMenuItem pobaToolStripMenuItem;
-        private ToolStripMenuItem sucaToolStripMenuItem;
-        private ToolStripMenuItem setziToolStripMenuItem;
-        private ToolStripSeparator toolStripSeparator1;
-        private ToolStripMenuItem craccaToolStripMenuItem;
-        private ToolStripMenuItem editToolStripMenuItem;
-        private ToolStripMenuItem viewToolStripMenuItem;
         private ToolStripMenuItem gitToolStripMenuItem;
-        private ToolStripMenuItem fileToolStripMenuItem;
-        private ToolStripMenuItem nuovoToolStripMenuItem;
-        private ToolStripMenuItem salvaToolStripMenuItem;
-        private ToolStripMenuItem salvaComeToolStripMenuItem;
-        private ToolStripMenuItem chiudiToolStripMenuItem;
+        private ToolStripMenuItem cloneRepositoryToolStripMenuItem;
+        private ToolStripMenuItem stageChangesToolStripMenuItem;
+        private ToolStripMenuItem commiitChangesToolStripMenuItem;
+        private ToolStripMenuItem menuToolStripMenuItem;
+        private ToolStripMenuItem showProductsToolStripMenuItem;
+        private ToolStripSeparator toolStripMenuItem1;
+        private ToolStripMenuItem loginToolStripMenuItem;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem showEmployeesToolStripMenuItem;
+        private ToolStripMenuItem logoutToolStripMenuItem;
     }
 }
