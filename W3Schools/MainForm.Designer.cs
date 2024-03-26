@@ -1,5 +1,6 @@
 ﻿namespace W3Schools
 {
+    // PUBLISHER
     partial class MainForm
     {
         /// <summary>
@@ -40,6 +41,7 @@
             cloneRepositoryToolStripMenuItem = new ToolStripMenuItem();
             stageChangesToolStripMenuItem = new ToolStripMenuItem();
             commiitChangesToolStripMenuItem = new ToolStripMenuItem();
+            showCustomersToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,7 +57,7 @@
             // 
             // menuToolStripMenuItem
             // 
-            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { showProductsToolStripMenuItem, showEmployeesToolStripMenuItem, toolStripMenuItem1, loginToolStripMenuItem, logoutToolStripMenuItem, exitToolStripMenuItem });
+            menuToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { showProductsToolStripMenuItem, showCustomersToolStripMenuItem, showEmployeesToolStripMenuItem, toolStripMenuItem1, loginToolStripMenuItem, logoutToolStripMenuItem, exitToolStripMenuItem });
             menuToolStripMenuItem.Name = "menuToolStripMenuItem";
             menuToolStripMenuItem.Size = new Size(60, 24);
             menuToolStripMenuItem.Text = "Menu";
@@ -79,9 +81,9 @@
             toolStripMenuItem1.Name = "toolStripMenuItem1";
             toolStripMenuItem1.Size = new Size(221, 6);
             // 
-            // lognToolStripMenuItem
+            // loginToolStripMenuItem
             // 
-            loginToolStripMenuItem.Name = "lognToolStripMenuItem";
+            loginToolStripMenuItem.Name = "loginToolStripMenuItem";
             loginToolStripMenuItem.Size = new Size(224, 26);
             loginToolStripMenuItem.Text = "Login";
             loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
@@ -92,6 +94,7 @@
             logoutToolStripMenuItem.Size = new Size(224, 26);
             logoutToolStripMenuItem.Text = "Logout";
             logoutToolStripMenuItem.Visible = false;
+            logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
@@ -124,6 +127,13 @@
             commiitChangesToolStripMenuItem.Size = new Size(205, 26);
             commiitChangesToolStripMenuItem.Text = "Commit Changes";
             // 
+            // showCustomersToolStripMenuItem
+            // 
+            showCustomersToolStripMenuItem.Name = "showCustomersToolStripMenuItem";
+            showCustomersToolStripMenuItem.Size = new Size(224, 26);
+            showCustomersToolStripMenuItem.Text = "Show Customers";
+            showCustomersToolStripMenuItem.Click += showCustomersToolStripMenuItem_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -155,5 +165,6 @@
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem showEmployeesToolStripMenuItem;
         private ToolStripMenuItem logoutToolStripMenuItem;
+        private ToolStripMenuItem showCustomersToolStripMenuItem;
     }
 }

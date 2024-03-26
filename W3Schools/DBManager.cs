@@ -60,9 +60,13 @@ namespace W3Schools
             using SqlConnection connection = new(ConnectionString);
             connection.Open(); // attempt to establish connection
             SqlCommand command = new(query, connection); // sqlcommand object creation
-            foreach (var param in parameters)
+            if (parameters != null)
             {
-                command.Parameters.AddWithValue(param.Key, param.Value);
+
+                foreach (var param in parameters)
+                {
+                    command.Parameters.AddWithValue(param.Key, param.Value);
+                }
             }
             // Adapter creation
             // sends sql command to DB server AND adapts data

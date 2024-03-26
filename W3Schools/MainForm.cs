@@ -17,11 +17,20 @@ namespace W3Schools
         {
             InitializeComponent();
             session.OnCreated += Session_OnCreated;
+            session.OnInvalidated += Session_OnInvalidated;
         }
+
+        private void Session_OnInvalidated(object? sender, EventArgs e)
+        {
+            loginToolStripMenuItem.Visible = true;
+            logoutToolStripMenuItem.Visible = false;
+        }
+
 
         private void Session_OnCreated(object? sender, EventArgs e)
         {
-            loginToolStripMenuItem.Visible = !loginToolStripMenuItem.Visible;
+            loginToolStripMenuItem.Visible = false;
+            logoutToolStripMenuItem.Visible = true;
         }
 
         private void chiudiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -42,7 +51,21 @@ namespace W3Schools
             }
         }
 
-        private void LoadProducts() { MessageBox.Show("Placeholder per tabella prodotti"); }
+        private void LoadProducts()
+        {
+            ProductsForm productsForm = new();
+            productsForm.MdiParent = this;
+            productsForm.Show();
+        }
+
+        private void LoadCustomers()
+        {
+            CustomersForm customersForm = new();
+            customersForm.MdiParent = this;
+            customersForm.Show();
+            customersForm.WindowState = FormWindowState.Maximized;
+        }
+
 
         private void LoadEmployees() { MessageBox.Show("Placeholder per tab Impiegati"); }
 
@@ -82,6 +105,21 @@ namespace W3Schools
             loginForm.ShowDialog();
 
         }
+
+        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Do you really want to log out?", caption: "Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                session.Invalidate();
+            }
+        }
+
+        private void showCustomersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExecuteInSession(LoadCustomers);
+        }
+
     }
 
 }
