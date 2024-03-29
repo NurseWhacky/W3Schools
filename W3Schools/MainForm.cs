@@ -24,6 +24,11 @@ namespace W3Schools
         {
             loginToolStripMenuItem.Visible = true;
             logoutToolStripMenuItem.Visible = false;
+
+            foreach(Form form in MdiChildren)
+            {
+                form.Close();
+            }
         }
 
 
@@ -67,7 +72,13 @@ namespace W3Schools
         }
 
 
-        private void LoadEmployees() { MessageBox.Show("Placeholder per tab Impiegati"); }
+        private void LoadEmployees() 
+        {
+            EmployeesForm employeesForm = new();
+            employeesForm.MdiParent = this;
+            employeesForm.Show();
+            employeesForm.WindowState = FormWindowState.Maximized;
+        }
 
 
         private void showProductsToolStripMenuItem_Click(object sender, EventArgs e)

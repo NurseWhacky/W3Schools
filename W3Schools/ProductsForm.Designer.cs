@@ -49,7 +49,9 @@
             dataGridView1.Dock = DockStyle.Fill;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(797, 445);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
@@ -62,6 +64,7 @@
             productIdDataGridViewTextBoxColumn.HeaderText = "Product Id";
             productIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             productIdDataGridViewTextBoxColumn.Name = "productIdDataGridViewTextBoxColumn";
+            productIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // ProductName
             // 
@@ -71,6 +74,7 @@
             ProductName.HeaderText = "Product Name";
             ProductName.MinimumWidth = 6;
             ProductName.Name = "ProductName";
+            ProductName.ReadOnly = true;
             ProductName.SortMode = DataGridViewColumnSortMode.Programmatic;
             // 
             // unitDataGridViewTextBoxColumn
@@ -81,6 +85,7 @@
             unitDataGridViewTextBoxColumn.HeaderText = "Unit";
             unitDataGridViewTextBoxColumn.MinimumWidth = 6;
             unitDataGridViewTextBoxColumn.Name = "unitDataGridViewTextBoxColumn";
+            unitDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // priceDataGridViewTextBoxColumn
             // 
@@ -90,6 +95,7 @@
             priceDataGridViewTextBoxColumn.HeaderText = "Price";
             priceDataGridViewTextBoxColumn.MinimumWidth = 6;
             priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            priceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // productBindingSource2
             // 

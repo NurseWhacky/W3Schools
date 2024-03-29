@@ -57,7 +57,7 @@
             dataGridView1.BackgroundColor = Color.Magenta;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.Salmon;
-            dataGridViewCellStyle1.Font = new Font("Comic Sans MS", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.Font = new Font("Comic Sans MS", 11F, FontStyle.Bold | FontStyle.Italic);
             dataGridViewCellStyle1.ForeColor = Color.DarkCyan;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
@@ -70,6 +70,7 @@
             dataGridView1.GridColor = Color.PaleVioletRed;
             dataGridView1.Location = new Point(0, 0);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Control;
             dataGridViewCellStyle2.Font = new Font("Comic Sans MS", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -79,6 +80,7 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(855, 450);
             dataGridView1.TabIndex = 0;
             // 
@@ -88,6 +90,7 @@
             customerIdDataGridViewTextBoxColumn.HeaderText = "Id";
             customerIdDataGridViewTextBoxColumn.MinimumWidth = 6;
             customerIdDataGridViewTextBoxColumn.Name = "customerIdDataGridViewTextBoxColumn";
+            customerIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customerNameDataGridViewTextBoxColumn
             // 
@@ -95,6 +98,7 @@
             customerNameDataGridViewTextBoxColumn.HeaderText = "Name";
             customerNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             customerNameDataGridViewTextBoxColumn.Name = "customerNameDataGridViewTextBoxColumn";
+            customerNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // contactNameDataGridViewTextBoxColumn
             // 
@@ -102,6 +106,7 @@
             contactNameDataGridViewTextBoxColumn.HeaderText = "Contact Name";
             contactNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             contactNameDataGridViewTextBoxColumn.Name = "contactNameDataGridViewTextBoxColumn";
+            contactNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // addressDataGridViewTextBoxColumn
             // 
@@ -109,6 +114,7 @@
             addressDataGridViewTextBoxColumn.HeaderText = "Address";
             addressDataGridViewTextBoxColumn.MinimumWidth = 6;
             addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            addressDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // cityDataGridViewTextBoxColumn
             // 
@@ -116,6 +122,7 @@
             cityDataGridViewTextBoxColumn.HeaderText = "City";
             cityDataGridViewTextBoxColumn.MinimumWidth = 6;
             cityDataGridViewTextBoxColumn.Name = "cityDataGridViewTextBoxColumn";
+            cityDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // postalCodeDataGridViewTextBoxColumn
             // 
@@ -123,6 +130,7 @@
             postalCodeDataGridViewTextBoxColumn.HeaderText = "Zip Code";
             postalCodeDataGridViewTextBoxColumn.MinimumWidth = 6;
             postalCodeDataGridViewTextBoxColumn.Name = "postalCodeDataGridViewTextBoxColumn";
+            postalCodeDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // countryDataGridViewTextBoxColumn
             // 
@@ -130,6 +138,7 @@
             countryDataGridViewTextBoxColumn.HeaderText = "Country";
             countryDataGridViewTextBoxColumn.MinimumWidth = 6;
             countryDataGridViewTextBoxColumn.Name = "countryDataGridViewTextBoxColumn";
+            countryDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // customerBindingSource
             // 

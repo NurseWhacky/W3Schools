@@ -32,6 +32,7 @@
             menuStrip1 = new MenuStrip();
             menuToolStripMenuItem = new ToolStripMenuItem();
             showProductsToolStripMenuItem = new ToolStripMenuItem();
+            showCustomersToolStripMenuItem = new ToolStripMenuItem();
             showEmployeesToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripSeparator();
             loginToolStripMenuItem = new ToolStripMenuItem();
@@ -41,7 +42,6 @@
             cloneRepositoryToolStripMenuItem = new ToolStripMenuItem();
             stageChangesToolStripMenuItem = new ToolStripMenuItem();
             commiitChangesToolStripMenuItem = new ToolStripMenuItem();
-            showCustomersToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -66,14 +66,21 @@
             // 
             showProductsToolStripMenuItem.Name = "showProductsToolStripMenuItem";
             showProductsToolStripMenuItem.Size = new Size(224, 26);
-            showProductsToolStripMenuItem.Text = "Show products";
+            showProductsToolStripMenuItem.Text = "Show Products";
             showProductsToolStripMenuItem.Click += showProductsToolStripMenuItem_Click;
+            // 
+            // showCustomersToolStripMenuItem
+            // 
+            showCustomersToolStripMenuItem.Name = "showCustomersToolStripMenuItem";
+            showCustomersToolStripMenuItem.Size = new Size(224, 26);
+            showCustomersToolStripMenuItem.Text = "Show Customers";
+            showCustomersToolStripMenuItem.Click += showCustomersToolStripMenuItem_Click;
             // 
             // showEmployeesToolStripMenuItem
             // 
             showEmployeesToolStripMenuItem.Name = "showEmployeesToolStripMenuItem";
             showEmployeesToolStripMenuItem.Size = new Size(224, 26);
-            showEmployeesToolStripMenuItem.Text = "Show employees";
+            showEmployeesToolStripMenuItem.Text = "Show Employees";
             showEmployeesToolStripMenuItem.Click += showEmployeesToolStripMenuItem_Click;
             // 
             // toolStripMenuItem1
@@ -126,13 +133,6 @@
             commiitChangesToolStripMenuItem.Name = "commiitChangesToolStripMenuItem";
             commiitChangesToolStripMenuItem.Size = new Size(205, 26);
             commiitChangesToolStripMenuItem.Text = "Commit Changes";
-            // 
-            // showCustomersToolStripMenuItem
-            // 
-            showCustomersToolStripMenuItem.Name = "showCustomersToolStripMenuItem";
-            showCustomersToolStripMenuItem.Size = new Size(224, 26);
-            showCustomersToolStripMenuItem.Text = "Show Customers";
-            showCustomersToolStripMenuItem.Click += showCustomersToolStripMenuItem_Click;
             // 
             // MainForm
             // 
